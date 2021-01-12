@@ -13,8 +13,8 @@ class BankImpl extends UnicastRemoteObject implements Bank{
     public List<Customer> getCustomers(){
         List<Customer> list=new ArrayList<Customer>();
         try{
-            // Class.forName("oracle.jdbc.driver.OracleDriver");
             // Class.forName("org.postgresql.Driver");
+            // DriverManager.registerDriver(new org.postgresql.Driver());
             Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/students", "postgres",
                 "exams@123");
             System.out.println("Connection established successfully");
